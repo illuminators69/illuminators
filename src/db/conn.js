@@ -10,7 +10,10 @@ main().catch((err) => {
 async function main() {
   await mongoose
     //For Local database- .connect('mongodb://localhost:27017/databaseName')
-    .connect(process.env.MONGO_URL)
+    .connect(process.env.MONGO_URL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    })
     .then(() => {
       console.log(chalk.greenBright('Successfully connected to database!!!'))
     })
