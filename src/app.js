@@ -39,6 +39,7 @@ app.get('/', (req, res) => {
 
 app.get('/#contact', (req, res) => {
   const name = req.flash('user')
+  const errorMsg = req.flash('errorMsg')
   res.render('index', { name: name })
 })
 
@@ -58,7 +59,7 @@ app.post('/', async (req, res) => {
   }
 
   //Inserting form data to database
-  db.collection('details').insertOne(data, (err, collection) => {
+  db.collection('formDataCollection').insertOne(data, (err, collection) => {
     if (err) res.send('<h1>Database Problem!!!</h1>')
     else {
       console.log(
@@ -88,7 +89,7 @@ app.post('/', async (req, res) => {
         },
         (err, mailData) => {
           if (err) {
-            console.log(chalk.red('Unable to send mail: ') + err)
+            console.log(chalk.red('Unable to render mailView.ejs: ') + err)
           } else {
             transporter
               .sendMail({
@@ -97,6 +98,7 @@ app.post('/', async (req, res) => {
                 subject: 'NEW USER FORM SUBMITTED',
                 html: mailData,
               })
+
               .then((res) =>
                 console.log(chalk.blueBright('Email Successfully sent!'))
               )
