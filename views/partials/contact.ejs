@@ -2,7 +2,10 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Contact us by filling the form below & we will ger back to you</h3>
+            <h3 class="section-subheading text-muted"
+            style="font-weight: bold;
+            background-color: #00000085;
+            display: inline-block;">Contact us by filling the form below & we will ger back to you</h3>
         </div>
 
         <form id="contactForm" action="/" method="post">
@@ -50,8 +53,20 @@
 
     </div>
 
-    <%if(name != '') { %>
-        <h1 style="color: green; font-family: Arial, Helvetica, sans-serif; text-align: center;">Your form has been submitted. Thank you, <%= name %></h1>
-        <% } %>
+    <% if(name != '') { %>
+        <div class="alert alert-success text-center" role="alert"
+        style="text-align: center;
+        margin-top: 2%;
+        margin-left: 30%;
+        margin-right: 30%;
+        font-weight: 600;
+        padding-bottom: 0;
+        color: #0d452b;
+        background-color: #96ffcf;
+        border-color: #000000;
+        opacity: 0.6;">
+        <p >Your form has been submitted. Thank you, <%= name %>.</p>
+    </div>
+    <% } %>
 
 </section>
