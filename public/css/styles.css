@@ -289,7 +289,7 @@ figure {
 }
 
 img,
-svg {
+png {
   vertical-align: middle;
 }
 
@@ -11366,7 +11366,7 @@ p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: transparent;
+    background-color: black;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -11374,8 +11374,9 @@ p {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    height: 2rem;
+    height: 35px;
     transition: height 0.3s ease-in-out;
+    margin-bottom: 15px;
   }
   #mainNav.navbar-shrink {
     padding-top: 1rem;
