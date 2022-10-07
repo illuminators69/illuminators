@@ -10,9 +10,7 @@ main().catch((err) => {
 async function main() {
   await mongoose
     //For Local database- .connect('mongodb://localhost:27017/databaseName')
-    .connect(
-      'mongodb+srv://mongo:mongo6969@illuminators.zlv7kxe.mongodb.net/FormData?retryWrites=true&w=majority'
-    )
+    .connect(process.env.MONGO_URL)
     .then(() => {
       console.log(chalk.greenBright('Successfully connected to database!!!'))
     })

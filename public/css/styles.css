@@ -288,10 +288,10 @@ figure {
   margin: 0 0 1rem;
 }
 
-img,
+/* img,
 png {
   vertical-align: middle;
-}
+} */
 
 table {
   caption-side: bottom;
@@ -11374,7 +11374,7 @@ p {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    height: 35px;
+    height: 2rem;
     transition: height 0.3s ease-in-out;
     margin-bottom: 15px;
   }
@@ -11388,7 +11388,7 @@ p {
   }
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    height: 2.5rem;
   }
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
@@ -11416,7 +11416,7 @@ header.masthead .masthead-subheading {
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .masthead-heading {
-  font-size: 3.25rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 3.25rem;
   margin-bottom: 2rem;
